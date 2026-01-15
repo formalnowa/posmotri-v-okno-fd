@@ -1,3 +1,1 @@
-# Посмотри в окно
-
-Учебный проект в рамках второго спринта Яндекс Практикума
+https://github.com/formalnowa/posmotri-v-okno-fd.git

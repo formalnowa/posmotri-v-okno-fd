@@ -8,6 +8,25 @@ html {
   block-size: 100%;
 }
 
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+blockquote,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
 .page {
   display: flex;
   justify-content: center;
@@ -39,8 +58,7 @@ html {
   flex-direction: column;
   gap: 30px;
   block-size: 298px;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: auto;
 }
 
 .content__details {
@@ -71,13 +89,15 @@ html {
 
 .content__card-link {
   display: block;
-  color: #fff;
+  color: inherit;
   text-decoration: none;
+  min-width: 0;
 }
 
 .content__video-card {
   display: flex;
   align-items: flex-start;
+  min-width: 0;
 }
 
 .content__video-card-thumbnail {
@@ -132,7 +152,7 @@ html {
 }
 
 .content__card-link:focus-visible {
-  outline: 1px solid #fff;
+  outline: 1px solid currentColor;
   outline-offset: 2px;
 }
 
@@ -156,6 +176,7 @@ html {
   inline-size: 100%;
   block-size: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .search-form {
@@ -168,8 +189,8 @@ html {
   appearance: none;
   background-color: transparent;
   border: none;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
   font-family: inherit;
   font-size: 18px;
   color: #fff;
@@ -200,13 +221,12 @@ html {
   gap: 5px;
   width: fit-content;
   cursor: pointer;
-  outline: none;
 }
 
 .search-form__pseudo-checkbox {
   inline-size: 19px;
   block-size: 19px;
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
   padding: 1px;
 }
 
@@ -227,25 +247,6 @@ html {
   text-decoration: underline;
 }
 
-h1,
-h2,
-h3,
-h4,
-p,
-ul,
-ol,
-li,
-blockquote,
-fieldset {
-  margin: 0;
-  padding: 0;
-}
-
-ul,
-ol {
-  list-style: none;
-}
-
 .visually-hidden {
   position: absolute;
   inline-size: 1px;
@@ -257,9 +258,9 @@ ol {
 }
 
 .button {
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
   background-color: transparent;
-  color: #fff;
+  color: inherit;
   font-family: inherit;
   font-size: 18px;
   font-weight: 700;
@@ -290,7 +291,7 @@ ol {
 }
 
 .button:focus-visible {
-  outline: 1px solid #fff;
+  outline: 1px solid currentColor;
   outline-offset: 2px;
 }
 
@@ -299,12 +300,12 @@ ol {
 }
 
 .search-form__label:has(.search-form__checkbox:focus-visible) {
-  outline: 1px solid #fff;
+  outline: 1px solid currentColor;
   outline-offset: 2px;
 }
 
 .search-form__label:has(.search-form__textfield:focus-visible) {
-  outline: 1px solid #fff;
+  outline: 1px solid currentColor;
   outline-offset: 2px;
 }
 
